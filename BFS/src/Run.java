@@ -6,14 +6,15 @@ public class Run {
 		// TODO Auto-generated method stub
 		int x = 20;
 		Graph g = new Graph(x);
-		for(int i = 0; i < 30 ; i++) {
+		for(int i = 0; i < 200 ; i++) {
 			g.addWeightedEdge((int)(Math.random()*x), (int)(Math.random()*x), (int)(Math.random()*x));
-			int[] d = g.Dijkstras(0);
+			int[] d = g.BFS(0);
 			for(int ds: d) {
 				System.out.print(ds + " ");
 			}
 			System.out.println();
 		}
+		g.printMatrix();
 /*		g.addWeightedEdge(0, 4, 3);
 		g.addWeightedEdge(2, 3, 4);
 		g.addWeightedEdge(2, 5, 5);
